@@ -21,11 +21,13 @@ AI 에이전트를 직접 만들어보면서 구조를 이해하고
 | ChromaDB | 벡터 DB (RAG) |
 
 4.프로젝트 구조(추가하면서 진행 예정)
+```
 local-ai-agent/
 ├── tools/
 │   ├── file_tools.py
 │   └── search_tools.py
 └── main.py
+```
 
 ㅡㅡㅡ개발 일지ㅡㅡㅡ
 | 날짜       | 내용 |
