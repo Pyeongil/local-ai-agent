@@ -30,6 +30,7 @@ local-ai-agent/
 ```
 벨로그 주소
 https://velog.io/@qkek8823/posts
+
 ㅡㅡㅡ개발 일지ㅡㅡㅡ
 | 날짜       | 내용 |
 |----------- |------|
