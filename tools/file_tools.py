@@ -8,18 +8,21 @@ def read_file(filepath: str) -> str:                 # 어떤파일을 읽을지
     with open(filepath, 'r', encoding='utf-8') as f: # 파일을 열고 작업이 끝나면 자동으로 닫아줌
         return f.read()
     
-#파일 생성 및 덮어쓰기
+# 빈 파일 생성
+@tool
+def create_file(filepath: str) -> str:
+    """빈 파일을 생성할때 사용합니다."""
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write("")
+    return f"{filepath} 파일 생성완료"
+
+# 파일 내용 수정 및 덮어쓰기
 @tool
 def write_file(filepath: str, content: str) -> str:
-    """파일을 생성하거나 내용을 수정할때 사용합니다."""
-    if os.path.exists(filepath):                         # 경로에 파일이 있으면 수정 및 저장
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(content)
-        return f"{filepath} 수정 및 저장 완료"            # AI에게 주입
-    else:
-        with open(filepath, 'w', encoding='utf-8') as f: # 경로에 파일이 없으면 생성 및 저장
-            f.write(content)
-        return f"{filepath} 생성 및 저장 완료"            # AI에게 주입
+    """파일에 내용을 작성하거나 수정할때 사용합니다. 파일이 없으면 생성 후 내용을 저장합니다."""
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(content)
+    return f"{filepath} 수정 및 덮어쓰기 완료"
 
 # 파일 삭제 
 @tool
