@@ -1,6 +1,7 @@
 1.LangChain과 LangGraph를 활용한 로컬 환경 기반 AI 에이전트 개인 프로젝트
 
 프로젝트 소개
+
 AI 에이전트를 직접 만들어보면서 구조를 이해하고
 활용 능력을 키우기 위해 시작한 개인 프로젝트입니다.
 
@@ -24,9 +25,13 @@ AI 에이전트를 직접 만들어보면서 구조를 이해하고
 ```
 local-ai-agent/
 ├── tools/
+│   ├── __init__.py
 │   ├── file_tools.py
 │   └── search_tools.py
-└── main.py
+├── .gitignore
+├── main.py
+├── README.md
+└── requirements.txt
 ```
 벨로그 주소
 https://velog.io/@qkek8823/posts
@@ -35,3 +40,4 @@ https://velog.io/@qkek8823/posts
 | 날짜       | 내용 |
 |----------- |------|
 | 2026.04.21 | 프로젝트 기획 및 환경 세팅, 파일읽기 Tool 구현 | 
+| 2026.04.22 | 에이전트 Tool 작업 및 LangGraph 연결 및 테스트 진행 | 
