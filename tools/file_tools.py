@@ -20,4 +20,13 @@ def write_file(filepath: str, content: str) -> str:
         with open(filepath, 'w', encoding='utf-8') as f: # 경로에 파일이 없으면 생성 및 저장
             f.write(content)
         return f"{filepath} 생성 및 저장 완료"            # AI에게 주입
-    
+
+# 파일 삭제 
+@tool
+def delete_file(filepath: str) -> str:
+    """파일을 삭제할때 사용합니다"""
+    if os.path.exists(filepath):                       # 파일 있는지 확인
+        os.remove(filepath)                            # 경로에 파일이있으면 삭제
+        return f"{filepath} 파일 삭제 완료"             # Ai에게 주입
+    else:
+        return f"{filepath} 파일이 존재하지 않습니다."  # 파일이 없으면 반환
