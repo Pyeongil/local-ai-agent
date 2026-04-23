@@ -28,7 +28,7 @@ system_prompt = SystemMessage(content="""
  """)
 
 # Tool 목록
-tools = [read_file, create_file, write_file, delete_file, search_web, add_document, search_document]
+tools = [read_file, create_file, write_file, delete_file, search_web]
 
 #메모리 생성
 memory = MemorySaver()
