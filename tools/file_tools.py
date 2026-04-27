@@ -33,3 +33,15 @@ def delete_file(filepath: str) -> str:
         return f"{filepath} 파일 삭제 완료"             # Ai에게 주입
     else:
         return f"{filepath} 파일이 존재하지 않습니다."  # 파일이 없으면 반환
+    
+
+@tool
+def list_files(directory: str = ".") -> str:
+    """현재 폴더의 파일 목록을 보여줍니다.
+    파일 작업 전에 이 Tool로 먼저 파일 목록을 확인하세요."""
+    result = []
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            filepath = os.path.join(root, file)
+            result.append(filepath)
+    return "\n".join(result)
