@@ -27,7 +27,9 @@ local-ai-agent/
 ├── tools/
 │   ├── __init__.py
 │   ├── file_tools.py
+    ├── rag_tools.py
 │   └── search_tools.py
+│ 
 ├── .gitignore
 ├── main.py
 ├── README.md
@@ -43,3 +45,4 @@ https://velog.io/@qkek8823/posts
 | 2026.04.22 | 에이전트 Tool 작업 및 LangGraph 연결 및 테스트 진행 | 
 | 2026.04.23 | 프롬포트를 활용한 json출력방지 및 웹검색 tool 추가 | 
 | 2026.04.24 | 에이전트 메모리 기능 추가 | 
+| 2026.04.28 | 에이전트 RAG 기능 추가 | 
